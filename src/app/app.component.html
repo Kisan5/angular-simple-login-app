@@ -6,22 +6,7 @@
         <div class="col-6">
           <div class="card"> <!-- kisan: used bootstrap card to create a space in which the login form will be kept-->
             <div class="card-body">
-
-              <h1>Login Page</h1>
-
-              <form> <!-- kisan: used bootstrap forms to generate a form-->
-                <div class="form-group text-left">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="Enter email" name="userName"/>
-                </div>
-                <div class="form-group text-left">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
-                    name="password" />
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-              </form>
+              <router-outlet></router-outlet> <!-- kisan: this is used to place the component/element for the routes here-->
             </div>
           </div>
         </div>
