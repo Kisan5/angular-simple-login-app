@@ -1,13 +1,18 @@
 <h1>Login Page</h1>
 <form> <!-- kisan: used bootstrap forms to generate a form-->
-    <div class="form-group text-left">
+    <div class="form-group text-left"> <!-- kisan: here form-group class is used to create a wrapper for the form elements (bootstrap code)-->
         <label for="exampleInputEmail1">Email address</label>
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="Enter email" name="userName" />
+            placeholder="Enter email" name="uName" [(ngModel)]="userName"/> 
+            <!-- 1. kisan: ngModel is used for twoway binding to connect this field with ts file variable by which anywhere the variable value changed other place it will reflect automatically
+             2. this ngModel is present in formsModule so that needs to be imported available for this component otherwise error
+             3. in ngModel the variable name should be same as the name of variable present in the ts file, to which you want to point. other details what ever present like name,id dont not affect this ngModel connection, you can put anything there. check the name="" property is different here
+             4. placeholder is used to display the before text input what to display in that field and id is used to access that element from other place like ts file by js DOM etc.
+             5. here form-control class is used to main the form elements in the bootstarp form. it is assigned to each element to maintain a uniform decoration (part of bootstrap code)-->
     </div>
     <div class="form-group text-left">
         <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" />
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" [(ngModel)]="password" />
     </div>
-    <button type="submit" class="btn btn-primary">Login</button>
+    <button type="submit" class="btn btn-primary" (click)="login()">Login</button> <!-- kisan: here event binding is done by (eventName) e.g. (click) in this on click of click event the mentioned function will be called.-->
 </form>
