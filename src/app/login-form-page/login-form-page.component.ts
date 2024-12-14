@@ -51,15 +51,26 @@ export class LoginFormPageComponent {
 
     //kisan: way 2 - using some() - This is a alternative of forEach which is same but can break the loop inbetween if one of the condition is true and returned true value once.
     this.responsedUsersArray.some((item: any):boolean => {
-      console.log(item);
       if(this.userName === item.email && this.password === item.pass){
         this.validUser=true;
-        return true; //once this statement condition hit then the loop will stop
+        //resetting the values if successfully logged in
+        this.userName="";
+        this.password="";
+        return true; //kisan: this is used to break the loop. once this statement condition hit then the loop will stop
       }else{
         this.validUser=false;
-        return false; //for this false return the loop will not stop
+        return false; //kisan: this is used to continue the loop forward. for this false return the loop will not stop
       }
     });
+    
+    //kisan: way 3- used for(let of) loop - here also break and return not working need to check
+    // for(let x of this.responsedUsersArray){
+    //   console.log(x);
+    //   if(this.userName === x.email && this.password === x.pass){
+        
+    //     return;
+    //   }
+    // }
 
     if(this.validUser==true){
       alert('Login Successful.');
