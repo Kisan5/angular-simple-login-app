@@ -1,0 +1,10 @@
+.container-width-height{
+    width: 100%;
+    height: 100%; /* kisan: taking height of it parent element space*/
+}
+.modifing-max-width{ /*kisan: modified bootstrap container width to fit on screen*/
+    max-width: inherit;
+}
+.background-color-change{ /* used for Gradient effect background*/
+    background-image: linear-gradient(to bottom, #003477, #000);
+}

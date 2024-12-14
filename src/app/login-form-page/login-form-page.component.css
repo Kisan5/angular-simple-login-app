@@ -1,0 +1,7 @@
+.center-div{
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* in this we are setting the position as compared to its parent component postion. then moving 50% and returning 50% on each direction*/
+}

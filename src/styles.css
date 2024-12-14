@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+body{ /*kisan: general removing space taken for margin and padding by default and setting height width*/
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+}
