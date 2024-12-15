@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 First run the json server by `json-server --watch db.json` command.
 
-To run the application, after cloning run `npm run build` to generate the node modules.
+To run the application, after cloning run `npm install` to generate the node modules.
 
 ## Development server
 
